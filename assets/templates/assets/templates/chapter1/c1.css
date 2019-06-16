@@ -1,0 +1,35 @@
+@font-face {
+    font-family: ranjana;
+    src: url(ranjana.ttf);
+  }
+  @font-face {
+    font-family: Preeti;
+    src: url(Preeti.TTF);
+  }
+body{
+    text-align: center;
+}
+
+  h1 {
+    margin: 0 0 20px 0;
+    font-weight: 300;
+    font-size: 28px;
+  }
+
+  h2{
+      font-size: 48px;
+  }
+
+  #hId1{
+    font-family: 'ranjana';
+    font-size: 100px;
+    text-align: center;
+    color:black;
+  }
+  
+  #hId2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 72px;
+    text-align: center;
+    color:red;
+  }

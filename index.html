@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jhigu Dhime</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="text/javascript">
+    function validate() {
+
+      var email = document.form.email.value;
+      var password = document.form.password.value;
+      var repass = document.form.repass.value;
+
+      isPassword(password);
+      //a valid email 
+      isEmail(email);
+    }
+
+    function repass(password, repassword) {
+      if (password != repass) { //password should match
+        alert('password doesn\'t match');
+        return false;
+      }
+    }
+
+    function isPassword(password) {
+      password = password.split('');
+      var count = 0;
+      for (let i = 0; i < password.length; i++) {
+        if (!isNaN(password[i]))
+          count++;
+      }
+      if (count == 0) {
+        alert('password should atleast contain a number');
+        return false;
+      } else
+        return true;
+    }
+
+    function isEmail(email) {
+      var atPos = email.indexOf('@');
+      var dotPos = email.indexOf('.');
+      // - email should contain @ and dot(.) sign
+      if (atPos <= 0 || dotPos <= 0 || email.charAt(0) === '.') {
+        alert('should contain @ or dot sign(.) or should not start with those signs');
+        return false;
+      }
+      // - @ should appear before dot(.)
+      if (dotPos - atPos < 0) {
+        alert('@ should be before dot(.)');
+        return false;
+      }
+      // - there should be atleast two characters between @ and . sign
+      if (email.length - dotPos < 3) {
+        alert('should contain atleast 2 chars after last dot .')
+      }
+      // - email should nor start with a number
+      if (!isNaN(email.charAt(0))) {
+        alert('should not start with a number');
+        return false;
+      }
+      // - email should not contain spaces
+      if (containSpaces(email)) {
+        alert('should not contain spaces');
+        return false;
+      }
+
+    }
+  </script>
+</head>
+
+<body>
+  <h1 id="hId2">Jhigu Dhime <span id="hId1">lemu' l9d</span></h1>
+
+  <div id="login-box">
+    <div class="left">
+      <h1>Sign up</h1>
+      <form onsubmit="return validate()" action="assets/templates/main page.html">
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="text" name="email" placeholder="E-mail" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <input type="password" name="repass" placeholder="Retype password"required />
+
+        <input type="submit" name="signup_submit" value="Sign me up" />
+    </div>
+    </form>
+    <div class="right">
+      <!-- <span class="loginwith">Sign in with<br />social network</span>
+    
+    <button class="social-signin facebook">Log in with facebook</button>
+    <button class="social-signin twitter">Log in with Twitter</button>
+    <button class="social-signin google">Log in with Google+</button> -->
+    </div>
+    <!-- <div class="or">OR</div> -->
+  </div>
+
+
+
+</body>
+
+</html>

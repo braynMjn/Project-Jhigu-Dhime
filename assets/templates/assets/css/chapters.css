@@ -1,0 +1,52 @@
+@font-face {
+    font-family: ranjana;
+    src: url(ranjana.ttf);
+  }
+  body{
+      background: url('background1.jpg');
+      background-size: 1800px 1800px;
+      background-repeat: no-repeat;
+  }
+  h1 {
+    margin: 0 0 20px 0;
+    font-weight: 300;
+    font-size: 28px;
+  }
+
+  h2{
+      font-size: 48px;
+  }
+
+  #hId1{
+    font-family: 'ranjana';
+    font-size: 100px;
+    text-align: center;
+    color:black;
+  }
+  
+  #hId2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 72px;
+    text-align: center;
+    color:red;
+  }
+
+button{
+    margin-bottom: 40px;
+    width: 320px;
+    height: 56px;
+    border: none;
+    border-radius: 2px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 22px;  
+    transition: 0.2s ease;
+    cursor: pointer;
+    background: #32508E;
+  }
+
+  div{
+      text-align: center;
+  }
+  
